@@ -1,0 +1,37 @@
+
+<html> 
+<head>
+<!DOCTYPE html>
+    <title> Управление воспроизведением через JavaScript</title>
+</head>
+    <body>
+    <video id="video" style="border: 2px solid gray; cursor: pointer;">
+        <source src="video/vsvideo.mp4" />
+        <source src="video/vsvideo.ogg" /> 
+        <source src="video/vsvideo.webm" />
+    </video>
+
+    <script>    
+        window.onload = function () {
+            var videoElem = document.getElementById("video");
+
+            // устанавливаем размер элемента на странце как половина высоты и ширины Видеозаписи
+            videoElem.width = videoElem.videoWidth / 2; 
+            videoElem.height = videoElem.videoHeight / 2;
+
+            // запускаем Видео при наведении курсора
+            videoElem.onmouseover= function () {
+            this.play();
+            }
+
+            // останавливаем видео при выходе курсора 
+            videoElem.onmouseout = function () {
+                this.pause();
+            }
+            
+        }
+            
+
+    </script>
+</body>
+</html>
