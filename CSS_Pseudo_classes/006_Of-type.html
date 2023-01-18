@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>:first-of-type and :last-of-type</title>
+
+    <style>
+        /* :first-of-type получение первого элемента р в списке дочерних элементов */
+        p:first-of-type {
+            background: red;
+        }
+
+        /* :last-of-type - получение последнего элемента р в списке дочерних элементов */
+        p:last-of-type {
+            background: green;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Заголовок</h1>>
+
+    <p>Пeрвый пaparpad.</p> <!--first-of-type-->
+    <р>Второй параграф. </p>
+    <р>Третий параграф. </p>
+    <p>четвертый пaparpa.</p> <!--last-of-type-->
+
+    <div>
+
+        <p>Пepвый пaparpad.</p> <!--first-of-type-->
+        <р>Второй параграф. </p>
+        <р>Третий параграф. </p>
+        <p>четвертый пaparpa.</p> <!--last-of-type-->
+    </div>
+</body>
+</html>
